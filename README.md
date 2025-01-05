@@ -46,6 +46,7 @@ REST API project using NodeJS(ExpressJS) and MongoDB.
 
 - Authentication using Email and Password (Login and Register)
 - REST API: Create, update, get, list, delete task
+- JWT based authentication and Bcrypt for password hasing
 
 ## Task APIs
 
