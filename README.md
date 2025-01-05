@@ -54,7 +54,7 @@ REST API project using NodeJS(ExpressJS) and MongoDB.
 | List of all tasks | /api/v1/tasks     | GET    |                                          | GET /api/v1/tasks                                                                 |
 | Create a new task | /api/v1/tasks     | POST   | data:{title: String,description:String}  | POST /api/v1/tasks data:{title:'first task',description:'first task description'} |
 | Delete a task     | /api/v1/tasks/:id | DELETE | params-{id:String}                       | DELETE api/v1/tasks/123                                                           |
-| Update task       | /api/v1/tasks/:id | PUT    | data:{status:String}, params-{id:String} | PUT /api/v1/tasks/123 data:{id:'123'}                                             |
+| Update task       | /api/v1/tasks/:id | PUT    | data:{status:String}, params-{id:String} | PUT /api/v1/tasks/123 data:{status:'completed'}                                   |
 | Get single task   | /api/v1/tasks/:id | GET    | params-{id:String}                       | GET /api/v1/tasks/123                                                             |
 
 ## Auth APIs
