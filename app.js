@@ -8,7 +8,7 @@ const app = express();
 app.use(urlencoded({ extended: true }));
 
 dotenv.config();
-app.use(cookieParser());
+app.use(cookieParser(process.env.JWT_SECRET));
 
 import tasksRouter from "./routes/task.routes.js";
 import authRouter from "./routes/auth.routes.js";

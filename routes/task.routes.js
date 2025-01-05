@@ -6,13 +6,14 @@ import {
   getSingleTask,
   updateTask,
 } from "../controllers/task.controller.js";
+import { authenticateUser } from "../middlewares/authenticateUser.js";
 
 const router = express.Router();
 
-router.get("/", getAllTasks);
-router.get("/:id", getSingleTask);
-router.put("/:id", updateTask);
-router.delete("/:id", deleteTask);
-router.post("/", createTask);
+router.get("/", authenticateUser, getAllTasks);
+router.get("/:id", authenticateUser, getSingleTask);
+router.put("/:id", authenticateUser, updateTask);
+router.delete("/:id", authenticateUser, deleteTask);
+router.post("/", authenticateUser, createTask);
 
 export default router;
